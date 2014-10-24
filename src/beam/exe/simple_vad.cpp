@@ -41,7 +41,7 @@ int main(int argc, char* argv[]) {
 		}
 		fft.analyze(input, fft_input);
 		float energy = 0.f;
-		for (int i = 0; i < TWO_FRAME_SIZE; ++i){
+		for (int i = 6; i < TWO_FRAME_SIZE - 5; ++i){
 			energy += fft_input[i] * fft_input[i];
 		}
 		bool voice = vad.classify(time, energy);
